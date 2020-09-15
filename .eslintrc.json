@@ -1,0 +1,15 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:node/recommended",
+    "plugin:jest/recommended",
+    "plugin:prettier/recommended",
+    "standard",
+    "prettier"
+  ],
+  "plugins": ["node", "jest", "prettier"],
+  "rules": {
+    "no-console": "off",
+    "space-before-function-paren": "off"
+  }
+}

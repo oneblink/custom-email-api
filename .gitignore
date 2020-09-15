@@ -1,0 +1,7 @@
+node_modules
+.mysql
+.eslintcache
+npm-debug.log
+.env
+docker-compose.dev.yml
+.DS_Store
