@@ -39,3 +39,12 @@ const recipientEmail = 'RECIPIENT_EMAIL_ADDRESS'
 You can hardcode this, or source it from somewhere else. One place you may wish to do so from is the submission data, which will accessible already within the `submission-callback.js` route.
 
 Once the above configuration is taken care of, deploy the project as per normal. You can then configure a API Hosting submission event on the form you wish to have custom emails sent from.
+
+## Customising the templates
+
+There are two very basic mustache templates included - one for the email itself, and another for the PDF.
+
+`./src/lib/templates/email.mustache`
+`./src/lib/templates/pdf.mustache`
+
+Familiarity with mustache is recommended before editing these. Currently, the entirely of the submission object is passed to both templates, so you will be able to work with any values from your submission that are needed. Obviously you can change this code to suit your needs.
