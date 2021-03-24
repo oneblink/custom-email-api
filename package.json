@@ -1,39 +1,22 @@
 {
   "name": "custom-email-api",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "This 'template' project serves as a bare-bones API hosting project, that can be deployed standalone after some basic configuration is taken care of.",
+  "license": "ISC",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/oneblink/custom-email-api.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/oneblink/custom-email-api/issues"
-  },
-  "homepage": "https://github.com/oneblink/custom-email-api#readme",
   "dependencies": {
-    "@hapi/boom": "^9.1.0",
-    "@oneblink/sdk": "^0.9.7-beta.1",
-    "aws-sdk": "2.520.0",
+    "@hapi/boom": "^9.1.2",
+    "@oneblink/sdk": "^0.9.7-beta.2",
     "juice": "^7.0.0",
-    "mustache": "^4.0.1",
-    "nodemailer": "6.3.0"
+    "mustache": "^4.1.0"
   },
   "devDependencies": {
-    "@oneblink/cli": "^0.1.4",
-    "eslint": "^5.16.0",
-    "eslint-config-standard": "^12.0.0",
-    "eslint-plugin-import": "^2.17.2",
-    "eslint-plugin-node": "^8.0.1",
-    "eslint-plugin-promise": "^4.1.1",
-    "eslint-plugin-standard": "^4.0.0",
-    "fixpack": "^2.3.1",
-    "flow-bin": "^0.118.0"
+    "@oneblink/cli": "^0.1.11",
+    "eslint": "^7.22.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "prettier": "^2.2.1"
   },
   "engines": {
     "node": "~12",

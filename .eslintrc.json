@@ -1,15 +1,19 @@
 {
-  "extends": [
-    "eslint:recommended",
-    "plugin:node/recommended",
-    "plugin:jest/recommended",
-    "plugin:prettier/recommended",
-    "standard",
-    "prettier"
-  ],
-  "plugins": ["node", "jest", "prettier"],
+  "env": {
+    "commonjs": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": ["eslint:recommended", "prettier"],
+  "plugins": ["prettier"],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaVersion": 2020
+  },
   "rules": {
-    "no-console": "off",
-    "space-before-function-paren": "off"
+    "no-console": "off"
   }
 }

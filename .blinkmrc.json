@@ -4,17 +4,14 @@
     "cors": true,
     "routes": [
       {
-        "route": "/callback",
-        "module": "./src/routes/submission-callback.js"
+        "route": "/webhook",
+        "module": "./src/webhook.js"
       }
     ],
     "variables": {
-      "EMAIL_SENDER_ADDRESS": "YOUR_SENDING_ADDRESS",
-      "EMAIL_SENDER_NAME": "OneBlink Sample PDF Submission Event",
-      "CALLBACK_SECRET": "YOUR_CALLBACK_SUBMISSION_EVENT_SECRET",
-      "ACCESS_KEY": "FORMS_ACCESS_KEY",
-      "SECRET_KEY": "FORMS_SECRET_KEY",
-      "FORM_ID": "YOUR_FORM_ID",
+      "WEB_HOOK_SECRET": "WEB_HOOK_SECRET",
+      "FORMS_ACCESS_KEY": "FORMS_ACCESS_KEY",
+      "FORMS_SECRET_KEY": "FORMS_SECRET_KEY",
       "PDF_ACCESS_KEY": "PDF_ACCESS_KEY",
       "PDF_SECRET_KEY": "PDF_SECRET_KEY"
     }
