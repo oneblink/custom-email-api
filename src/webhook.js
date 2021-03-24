@@ -5,16 +5,9 @@ const OneBlink = require("@oneblink/sdk");
 
 const { generatePdfHtml, generateEmailHtml } = require("./templates");
 
-//
-// Set these values before running the webhook
-//
-const RECIPIENT_EMAIL_ADDRESS = "RECIPIENT_EMAIL_ADDRESS";
-const SENDER_EMAIL_ADDRESS = "SENDER_EMAIL_ADDRESS";
-const SENDER_NAME = "SENDER_NAME";
-const YOUR_EMAIL_SUBJECT_LINE = "YOUR_EMAIL_SUBJECT_LINE";
-//
-//
-//
+const RECIPIENT_EMAIL_ADDRESS = process.env.RECIPIENT_EMAIL_ADDRESS;
+const SENDER_EMAIL_ADDRESS = process.env.SENDER_EMAIL_ADDRESS;
+const SENDER_NAME = process.env.SENDER_NAME;
 
 const formsSDK = new OneBlink.Forms({
   accessKey: process.env.FORMS_ACCESS_KEY,
@@ -68,7 +61,7 @@ module.exports.post = async function webhook(req, res) {
 
   console.log("Sending email");
   await OneBlink.sendEmail({
-    subject: YOUR_EMAIL_SUBJECT_LINE,
+    subject: "Custom Email + PDF Submission Event",
     html: emailHtml,
     from: {
       address: SENDER_EMAIL_ADDRESS,

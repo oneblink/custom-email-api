@@ -8,24 +8,29 @@ The below steps assume familiarity with our API hosting offering, as well as kno
 
 ## Getting Started
 
-Replace the following `variables` values within the `blinkmrc.json` file and you'll need to configure your `project` as per normally configured for API hosting projects::
+1. Set the following values for each of the properties in `variables` in the `blinkmrc.json` file and [set the `project` property](https://github.com/oneblink/cli/blob/master/docs/api/overview.md#setting-scope):
 
-```json
-{
-  "project": "YOUR_PROJECT_SCOPE",
-  "variables": {
-    "WEB_HOOK_SECRET": "WEB_HOOK_SECRET", // The callback 'secret' configured on your API hosting submission event
-    "FORMS_ACCESS_KEY": "FORMS_ACCESS_KEY", // your forms as a service access key
-    "FORMS_SECRET_KEY": "FORMS_SECRET_KEY", // your forms as a service secret key
-    "PDF_ACCESS_KEY": "PDF_ACCESS_KEY", // your PDF access key
-    "PDF_SECRET_KEY": "PDF_SECRET_KEY" // your PDF secret key
-  }
-}
-```
+   ```js
+   {
+     "project": "YOUR_PROJECT_SCOPE",
+     "variables": {
+       "RECIPIENT_EMAIL_ADDRESS": "RECIPIENT_EMAIL_ADDRESS", // The email address to send the email to
+       "SENDER_EMAIL_ADDRESS": "SENDER_EMAIL_ADDRESS", // The email address to send the email from
+       "SENDER_NAME": "SENDER_NAME", // The name to send the email from
+       "WEB_HOOK_SECRET": "WEB_HOOK_SECRET", // The web hook 'secret' configured on your API hosting submission event
+       "FORMS_ACCESS_KEY": "FORMS_ACCESS_KEY", // your forms as a service access key
+       "FORMS_SECRET_KEY": "FORMS_SECRET_KEY", // your forms as a service secret key
+       "PDF_ACCESS_KEY": "PDF_ACCESS_KEY", // your PDF access key
+       "PDF_SECRET_KEY": "PDF_SECRET_KEY" // your PDF secret key
+     }
+   }
+   ```
 
-The recipient address is hardcoded within the `./src/webhook.js` file. You can hard code this, or source it from somewhere else. One place you may wish to do so from is the submission data, which is available already within the `./src/webhook.js`.
+1. Deploy the project using the [OneBlink CLI](https://www.npmjs.com/package/@oneblink/cli). You can then configure a API Hosting submission event on the form you wish to have custom emails sent from.
 
-Once the above configuration is taken care of, deploy the project as per normal. You can then configure a API Hosting submission event on the form you wish to have custom emails sent from.
+## Customizing Recipient
+
+The recipient address is current set in within the `.blinkmrc.json` file as an environment variable. You change this to come from the submission data, which is available already within the `./src/webhook.js`.
 
 ## Customizing Templates
 
