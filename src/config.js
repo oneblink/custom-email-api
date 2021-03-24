@@ -7,11 +7,6 @@ const config = {
   SECRET_KEY: process.env.SECRET_KEY,
 
   // OneBlink PDF Service & Permissions
-  PDF_SERVICE_URL:
-    typeof process.env.PDF_SERVICE_URL === 'string'
-      ? process.env.PDF_SERVICE_URL
-      : '',
-
   PDF_ACCESS_KEY:
     typeof process.env.PDF_ACCESS_KEY === 'string'
       ? process.env.PDF_ACCESS_KEY
