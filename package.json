@@ -12,7 +12,7 @@
     "mustache": "^4.1.0"
   },
   "devDependencies": {
-    "@oneblink/cli": "^0.1.11",
+    "@oneblink/cli": "^3.2.1",
     "eslint": "^7.22.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-prettier": "^3.3.1",
